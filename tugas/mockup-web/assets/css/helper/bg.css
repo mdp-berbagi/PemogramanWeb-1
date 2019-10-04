@@ -1,0 +1,45 @@
+@charset "UTF-8";
+
+.bg-blue {
+  background-color: #007bff!important;
+}
+
+.bg-brown {
+  background-color: #6c757d!important;
+}
+
+.bg-green {
+  background-color: #28a745!important;
+}
+
+.bg-red {
+  background-color: #dc3545!important;
+}
+
+.bg-yellow {
+  background-color: #ffc107!important;
+}
+
+.bg-light {
+  background-color: #f8f9fa!important;
+}
+
+.bg-dark {
+  background-color: #343a40!important;
+}
+
+.bg-white {
+  background-color: white!important;
+}
+
+.bg-white-50 {
+  background-color: rgba(255,255,255,0.5)!important;
+}
+
+.bg-black {
+  background-color: white!important;
+}
+
+.bg-black-50 {
+  background-color: rgba(0,0,0, 0.5)!important;
+}

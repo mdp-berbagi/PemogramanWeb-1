@@ -1,0 +1,45 @@
+@charset "UTF-8";
+
+.text-blue {
+  color : #007bff!important;
+}
+
+.text-brown {
+  color: #6c757d!important;
+}
+
+.text-green {
+  color: #28a745!important;
+}
+
+.text-red {
+  color: #dc3545!important;
+}
+
+.text-yellow {
+  color: #ffc107!important;
+}
+
+.text-light {
+  color: #f8f9fa!important;
+}
+
+.text-dark {
+  color: #343a40!important;
+}
+
+.text-white {
+  color: white!important;
+}
+
+.text-white-50 {
+  color: rgba(255,255,255,0.5)!important;
+}
+
+.text-black {
+  color: white!important;
+}
+
+.text-black-50 {
+  color: rgba(0,0,0, 0.5)!important;
+}
