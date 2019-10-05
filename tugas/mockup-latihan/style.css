@@ -1,0 +1,70 @@
+body {
+  margin: 0;
+}
+
+.btn {
+  background-color: blue;
+  border-color: white;
+  border-width: thin;
+  color: white;
+  padding: 8px 50px;
+}
+
+.input {
+  background: none;
+  border-style: solid;
+  border-color: white;
+  border-width: 2px;
+  width: 100%;
+}
+
+.input-text {
+  height: 35px;
+}
+
+.gallery {
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.gallery div {
+  width: 150px;
+  height: 150px;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center center;
+  margin: 10px;
+}
+
+.container-bg-setting {
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+
+.nav-menu {
+  list-style-type: none;
+  margin: 0;
+}
+
+.nav-menu li {
+  float: left;
+  margin: 0 10px;
+}
+
+.text-white {
+  color: white;
+}
+
+.baris {
+  display: flex;
+}
+
+.container-full {
+  width: 100%;
+}
+
+.container {
+  max-width: 1000px;
+  margin: auto;
+}
