@@ -1,0 +1,86 @@
+body {
+  margin: 0;
+  background-image: linear-gradient(to bottom, blue, white);
+  background-attachment: fixed;
+}
+
+.box {
+  width: 100%;
+  background-color: skyblue;
+  box-shadow: 0 10px 30px black;
+
+  background-image: linear-gradient(to left, blue, violet);
+}
+
+a:link {
+  text-decoration: none;
+  color: white;
+  background-color: violet;
+  padding: 5px 15px;
+  margin: 30px 10px;
+  font-size: 30pt;
+}
+
+a:link:hover {
+  /* example box */
+  box-shadow: 0px 0px 15px black;
+  text-shadow: 20px 70px 0px black;
+}
+
+
+.box2 {
+  position: absolute;
+  width: 300px;
+  height: 300px;
+  left: 300px;
+  top: 100px;
+  background-color: white;
+
+  /* example transition more than 2 */
+  transition: width 2s;
+  transition: transform 2s;
+}
+
+.box2:hover {
+  width: 1000px;
+  transform: rotateX(200deg) rotateZ(100deg);
+}
+
+.circle {
+  position: absolute;
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  right: 300px;
+  top: 100px;
+  background-color: white;
+
+  /* example basic transition */
+  transition: background-color 5s;
+}
+
+.circle:hover {
+  background-color: blue;
+}
+
+.box3 {
+  position: fixed;
+  left: 0;
+  right: 0;
+  width: 100%;
+  bottom: 0;
+  height: 80px;
+  animation-name: gantiposisi;
+  animation-duration: 2s;
+  background-color: grey;
+}
+
+@keyframes gantiposisi {
+  from {
+    bottom: -300px;
+  }
+
+  to{
+    bottom: -0px;
+  }
+}
