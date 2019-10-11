@@ -1,0 +1,19 @@
+.header-2 {
+    font-size: 30pt;
+    margin: 0;
+}
+
+.header-2::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  width: 350px;
+  height: 3px;
+  background: white;
+  display: inline-block;
+}
+
+.tech-foto {
+  width: 200px;
+  height: 200px;
+}

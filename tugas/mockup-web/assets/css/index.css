@@ -6,6 +6,10 @@
 @import "./helper/text.css";
 @import "./helper/bg.css";
 @import "./helper/text.css";
+@import "./helper/font.css";
+@import "./helper/shadow.css";
+@import "./helper/border.css";
+@import "./helper/custom.css";
 
 @import "./components/nav.css";
 @import "./components/btn.css";

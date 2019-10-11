@@ -43,3 +43,14 @@
 .text-black-50 {
   color: rgba(0,0,0, 0.5)!important;
 }
+
+.text-bold {
+  font-family: 'Be Vietnam';
+  font-style: bold;
+  font-weight: 700;
+}
+
+/* text align */
+.text-center {
+  text-align: center;
+}
