@@ -1,0 +1,74 @@
+.text-header {
+  color: white;
+  border-left: solid 2px white;
+  padding: 0 0 0 30px;
+  margin: 10px;
+}
+
+.container {
+  display: flex;
+}
+
+.example-block {
+  background-color: grey;
+  margin: 5px;
+  padding: 10px;
+}
+
+@media only screen and (min-width: 0px) and (max-width: 599px) {
+  body {
+    background-color: red;
+  }
+
+  .text-header {
+    font-size: 20pt;
+  }
+
+  .left {
+    width: 100%;
+  }
+
+  .right {
+    width: 100%;
+  }
+
+  .container {
+    flex-flow: wrap;
+  }
+}
+
+@media only screen and (min-width: 600px) {
+  body {
+    background-color: black;
+  }
+
+  .text-header {
+    font-size: 50pt;
+  }
+
+  .left {
+    width: 50%;
+  }
+
+  .right {
+    width: 50%;
+  }
+}
+
+@media only screen and (min-width: 900px) {
+  body {
+    background-color: blue;
+  }
+
+  .text-header {
+    font-size: 80pt;
+  }
+
+  .left {
+    width: 30%;
+  }
+
+  .right {
+    width: 70%;
+  }
+}

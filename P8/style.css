@@ -1,0 +1,23 @@
+.font-header-1 {
+  font-size: 32pt;
+}
+
+.font-blue {
+  color: blue;
+}
+
+.font-white {
+  color: white;
+}
+
+.bg-green {
+  background-color: green;
+}
+
+.bg-skyblue {
+  background-color: skyblue;
+}
+
+.text-upper {
+  text-transform: uppercase;
+}
