@@ -28,6 +28,10 @@
   background-color: #343a40!important;
 }
 
+.bg-transparent {
+  background: transparent;
+}
+
 .bg-white {
   background-color: white!important;
 }
@@ -42,4 +46,20 @@
 
 .bg-black-50 {
   background-color: rgba(0,0,0, 0.5)!important;
+}
+
+.bg-cover {
+  background-size: cover;
+}
+
+.bg-no-repeat {
+    background-repeat: no-repeat;
+}
+
+.bg-center-center {
+  background-position: center center;
+}
+
+.bg-contain {
+  background-size: contain;
 }

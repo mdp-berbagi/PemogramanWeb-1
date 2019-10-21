@@ -1,0 +1,17 @@
+.border {
+  border-width: thin;
+  border-style: solid;
+}
+
+.border-rounded {
+  border-radius: 100%;
+}
+
+.border-style-none {
+  border-style: none;
+}
+
+/* color */
+.border-white {
+    border-color: white;
+}

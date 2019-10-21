@@ -1,16 +1,25 @@
 @charset "UTF-8";
 
+.w-100 {
+  width: 100%;
+}
+
 .container {
   width: 1200px;
   margin: auto;
 }
 
 .container-fluid {
+  position: relative;
   width: 100%;
 }
 
 .justify-center{
   justify-content: center;
+}
+
+.justify-end{
+  justify-content: flex-end;
 }
 
 .row-warp {
@@ -72,4 +81,12 @@
 
 .col-1 {
   width: 8.33333333%;
+}
+
+.index-5 {
+  z-index: 5;
+}
+
+.absolute-right-bottom {
+  position: absolute; bottom: 0; right: 0;
 }
