@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="" />
+
+    <link rel="stylesheet" href="./assets/bootstrap4/dist/css/bootstrap.css" />
+
+    <title>
+      Pertemuan 9
+    </title>
+  </head>
+  <body>
+    <h1>This not responsive</h1>
+    <div class='container'>
+      <div class='row bg-primary'>
+        <div class="col">
+          col1
+        </div>
+        <div class="col">
+          col2
+        </div>
+        <div class="col">
+          col3
+        </div>
+      </div>
+
+      <div class='row bg-warning'>
+        <div class="col-6">
+          col6
+        </div>
+        <div class="col-6">
+          col6
+        </div>
+      </div>
+
+      <div class='row bg-success'>
+        <div class="col-6">
+          col6
+        </div>
+        <div class="col-6">
+          <div class='row bg-warning'>
+            <div class="col-6">
+              col6
+            </div>
+            <div class="col-6">
+              col6
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <h1>This responsive</h1>
+    <div class='container'>
+      <div class='row bg-primary'>
+        <div class="col-sm-4 col-md-6 col-xs-12 bg-warning">
+          col1
+        </div>
+        <div class="col-sm-4 col-md-3 col-xs-12">
+          col2
+        </div>
+        <div class="col-sm-4 col-md-3 col-xs-12">
+          col3
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
