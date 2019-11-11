@@ -1,0 +1,13 @@
+{
+    "success": true,
+    "result": [
+        {
+            "id": 1,
+            "nama": "Iphone 11"
+        },
+        {
+            "id": 2,
+            "nama": "Iphone S12"
+        }
+    ]
+}

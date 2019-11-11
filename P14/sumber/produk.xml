@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<result>
+    <produk>
+        <id>1</id>
+        <nama>Iphone 11</nama>
+    </produk>
+    <produk>
+        <id>2</id>
+        <nama>Iphone S12</nama>
+    </produk>
+</result>
