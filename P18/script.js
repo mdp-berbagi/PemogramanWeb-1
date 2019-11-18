@@ -1,29 +1,45 @@
+var maxPagination = 0;
+function paginationControl(newPaginationMax) {
+    console.log('Fungsi paginationControl dipanggil')
+    
+    if(newPaginationMax == maxPagination) {
+        console.log('Tidak dijalankan karna jumlah pagination sama')
+        return;
+    }
+
+    console.log('Fungsi paginationControl Dijalankan')
+
+    const paginationEl = document.getElementById('pagination-container')
+    paginationEl.innerHTML = ''
+
+    for(let x = 1; x <= newPaginationMax; x++) {
+        let newLink = document.createElement('a')
+        newLink.setAttribute('href', '#')
+        newLink.setAttribute('class', 'page-link ')
+        newLink.addEventListener('click', () => {
+            userListGetter(x);
+        });
+        newLink.textContent = x
+        
+        let newList = document.createElement('li')
+        newList.setAttribute('class', 'page-item')
+        newList.appendChild(newLink)
+
+        paginationEl.appendChild(newList)
+    }
+
+    maxPagination = newPaginationMax
+}
+
 function userListGetter(paging) {
     fetch("https://reqres.in/api/users?page=" + paging)
         .catch((result) => console.error(result))
         .then(res => res.json())
         .then((obj) => {
-            console.log(obj);
-            
+
             // pagination
-            const paginationEl = document.getElementById('pagination-container');
-            paginationEl.innerHTML = '';
+            paginationControl(obj.total_pages)
 
-            for(let x = 1; x <= obj.total_pages; x++) {
-                let newLink = document.createElement('a')
-                newLink.setAttribute('href', '#')
-                newLink.setAttribute('class', 'page-link ')
-                newLink.addEventListener('click', () => {
-                    userListGetter(x);
-                });
-                newLink.textContent = x
-                
-                let newList = document.createElement('li')
-                newList.setAttribute('class', 'page-item')
-                newList.appendChild(newLink)
-
-                paginationEl.appendChild(newList)
-            }
 
             //lising user data
             let listUserContainer = document.getElementById('user-list')
@@ -34,7 +50,7 @@ function userListGetter(paging) {
                 let listEl = document.createElement('li')
                 listEl.setAttribute('class', 'list-group-item')
                 listEl.textContent = row.first_name
-                listEl.addEventListener('click', () => {
+                listEl.addEventListener('click', (evt) => {
                     document
                         .getElementById('user_name')
                         .textContent = row.first_name + " " + row.last_name
@@ -53,4 +69,4 @@ function userListGetter(paging) {
         })
 }
 
-userListGetter(1);
+userListGetter(1)
