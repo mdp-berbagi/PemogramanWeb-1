@@ -1,0 +1,130 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+
+    <title>rest API : Exam Test</title>
+</head>
+
+<body class='bg-dark'>
+    <nav class='navbar bg-primary shadow-lg'>
+        <div class='container'>
+            <a class='navbar-brand text-light' href="#">
+                <h1 class='h4'>rest API : Exam Test</h1>
+            </a>
+        </div>
+    </nav>
+
+    <div class='container'>
+        <div class='row'>
+            <div class='col-3'>
+                <div class='my-3'>
+                    <text class='h3 text-light'>
+                        <span class='text-warning h1'>|</span>
+                        User List
+                    </text>
+                </div>
+                <div>
+                    <ul id='user-list' class='list-group'>
+                        <li class='list-group-item'>Waiting for server response...</li>
+                    </ul>
+                </div>
+            </div>
+            <div class='col-9'>
+                <div class='row my-3'>
+                    <div class='col-7'>
+                        <text class='h3 text-light'>
+                            <span class='text-warning h1'>|</span>
+                            <span id='form-control-status'>View</span> User Data
+                        </text>
+                    </div>
+                    <div class='col-5'>
+                        <div class='mt-3 d-flex justify-content-end'>
+                            <div class='btn-group btn-group-toggle'>
+                                <label for="view-data" class='btn btn-primary'>
+                                    <input type='radio' id='view-data' name='data-opt' id='view-data'
+                                        autocomplete="off" />
+                                    <i class="fa fa-eye" aria-hidden="true"></i>
+                                </label>
+
+                                <label for="edit-data" class='btn btn-primary'>
+                                    <input type='radio' name='data-opt' id='edit-data' autocomplete="off" />
+                                    <i class="fa fa-pencil-square-o" aria-hidden="true"></i>
+                                </label>
+
+                                <label for="delete-data" class='btn btn-primary'>
+                                    <input type='radio' name='data-opt' id='delete-data' autocomplete="off" />
+                                    <i class="fa fa-trash" aria-hidden="true"></i>
+                                </label>
+
+                                <label for="add-data" class='btn btn-primary'>
+                                    <input type='radio' name='data-opt' id='add-data' autocomplete="off" />
+                                    <i class="fa fa-plus-square" aria-hidden="true"></i>
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class='card shadow-lg p-3'>
+                    <form id='user-form'>
+                        <div class='form-row'>
+                            <div class='form-group col-6'>
+                                <label for='first-name'>First Name</label>
+                                <input type='text' class='form-control' id='first-name' />
+                            </div>
+
+                            <div class='form-group col-6'>
+                                <label for='last-name'>Last Name</label>
+                                <input type='text' class='form-control' id='last-name' />
+                            </div>
+                        </div>
+
+                        <div class='form-row'>
+                            <div class='form-group col-6'>
+                                <label for='email'>Email</label>
+                                <input type='email' class='form-control' id='email' />
+                            </div>
+
+                            <div class='form-group col-6'>
+                                <label for='site'>Website</label>
+                                <input type='site' class='form-control' id='site' />
+                            </div>
+                        </div>
+
+                        <div class='form-row'>
+                            <div class='form-group col-6'>
+                                Gender : 
+                                <label for='gender-man'>Man</label>
+                                <input type='radio' id='gender-man' name='gender' />
+
+                                <label for='gender-woman'>Woman</label>
+                                <input type='radio' id='gender-woman' name='gender' />
+                            </div>
+
+                            <div class='form-group col-6'>
+                                <label for='site'>Website</label>
+                                <input type='site' class='form-control' id='site' />
+                            </div>
+                        </div>
+                        <div class='form-row'>
+                            <div class='form-group col-12'>
+                                <label for='about'>About</label>
+                                <textarea class='form-control' id='about'></textarea>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src='./script.js' type="text/javascript"></script>
+</body>
+
+</html>
