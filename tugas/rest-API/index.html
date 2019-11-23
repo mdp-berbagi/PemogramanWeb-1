@@ -22,22 +22,35 @@
         </div>
     </nav>
 
-    <div class='container'>
+    <div class='container py-4'>
         <div class='row'>
-            <div class='col-3'>
-                <div class='my-3'>
+            <div class='col-4'>
+                <div class='mt-3 mb-4'>
                     <text class='h3 text-light'>
                         <span class='text-warning h1'>|</span>
                         User List
                     </text>
+                </div>
+                <div class='my-1'>
+                    <input type="text" id="user_searcher" class='form-control' placeholder="Search">
                 </div>
                 <div>
                     <ul id='user-list' class='list-group'>
                         <li class='list-group-item'>Waiting for server response...</li>
                     </ul>
                 </div>
+                <div class='my-2 d-flex justify-content-center'>
+                    <ul class='pagination'>
+                        <li class='page-item'>
+                            <a id='btn-prev-data' class='page-link'>Prev</a>
+                        </li>
+                        <li class='page-item'>
+                            <a id='btn-next-data' class='page-link'>Next</a>
+                        </li>
+                    </ul>
+                </div>
             </div>
-            <div class='col-9'>
+            <div class='col-7'>
                 <div class='row my-3'>
                     <div class='col-7'>
                         <text class='h3 text-light'>
@@ -48,23 +61,23 @@
                     <div class='col-5'>
                         <div class='mt-3 d-flex justify-content-end'>
                             <div class='btn-group btn-group-toggle'>
-                                <label for="view-data" class='btn btn-primary'>
+                                <label title="View Data" for="view-data" class='btn btn-primary'>
                                     <input type='radio' id='view-data' name='data-opt' id='view-data'
                                         autocomplete="off" />
                                     <i class="fa fa-eye" aria-hidden="true"></i>
                                 </label>
 
-                                <label for="edit-data" class='btn btn-primary'>
+                                <label title="Edit Data" for="edit-data" class='btn btn-primary'>
                                     <input type='radio' name='data-opt' id='edit-data' autocomplete="off" />
                                     <i class="fa fa-pencil-square-o" aria-hidden="true"></i>
                                 </label>
 
-                                <label for="delete-data" class='btn btn-primary'>
+                                <label title="Delete Data" for="delete-data" class='btn btn-primary'>
                                     <input type='radio' name='data-opt' id='delete-data' autocomplete="off" />
                                     <i class="fa fa-trash" aria-hidden="true"></i>
                                 </label>
 
-                                <label for="add-data" class='btn btn-primary'>
+                                <label title="Add Data" for="add-data" class='btn btn-primary'>
                                     <input type='radio' name='data-opt' id='add-data' autocomplete="off" />
                                     <i class="fa fa-plus-square" aria-hidden="true"></i>
                                 </label>
@@ -75,48 +88,61 @@
                 <div class='card shadow-lg p-3'>
                     <form id='user-form'>
                         <div class='form-row'>
+                            <div class='d-flex justify-content-center form-group col-12'>
+                                <img id='user-photo' src='https://api.adorable.io/avatars/270/abott@adorable.png' />
+                            </div>
+                        </div>
+                        <div class='form-row'>
+                            <div class='form-group col-12'>
+                                <label for='avatar'>Avatar</label>
+                                <input type='text' class='form-control' name='avatar' id='avatar' />
+                            </div>
+                        </div>
+
+                        <div class='form-row'>
                             <div class='form-group col-6'>
                                 <label for='first-name'>First Name</label>
-                                <input type='text' class='form-control' id='first-name' />
+                                <input type='text' class='form-control' name='first_name' id='first-name' />
                             </div>
 
                             <div class='form-group col-6'>
                                 <label for='last-name'>Last Name</label>
-                                <input type='text' class='form-control' id='last-name' />
+                                <input type='text' class='form-control' name='last_name' id='last-name' />
                             </div>
                         </div>
 
                         <div class='form-row'>
                             <div class='form-group col-6'>
                                 <label for='email'>Email</label>
-                                <input type='email' class='form-control' id='email' />
+                                <input type='email' name='email' class='form-control' id='email' />
                             </div>
 
                             <div class='form-group col-6'>
                                 <label for='site'>Website</label>
-                                <input type='site' class='form-control' id='site' />
+                                <input type='site' name='website' class='form-control' id='site' />
                             </div>
                         </div>
 
                         <div class='form-row'>
                             <div class='form-group col-6'>
-                                Gender : 
-                                <label for='gender-man'>Man</label>
-                                <input type='radio' id='gender-man' name='gender' />
-
-                                <label for='gender-woman'>Woman</label>
-                                <input type='radio' id='gender-woman' name='gender' />
+                                <label for='site'>Dob</label>
+                                <input type='date' name='dob' class='form-control' id='dob' />
                             </div>
-
                             <div class='form-group col-6'>
-                                <label for='site'>Website</label>
-                                <input type='site' class='form-control' id='site' />
+                                Gender <br />
+
+                                <input type='radio' id='gender-male' name='gender' value='male' />
+                                <label for='gender-man'>Male</label>
+
+                                <input type='radio' id='gender-female' name='gender' value='female' />
+                                <label for='gender-woman'>Female</label>
                             </div>
                         </div>
-                        <div class='form-row'>
-                            <div class='form-group col-12'>
-                                <label for='about'>About</label>
-                                <textarea class='form-control' id='about'></textarea>
+
+                        <div id='btn-submit-container' class='form-row'>
+                            <div class='form-group col-12 d-flex justify-content-end'>
+                                <button id='btn-submit' class='btn btn-primary'>Simpan</button>
+                                <button class='btn'>Batal</button>
                             </div>
                         </div>
                     </form>
