@@ -101,7 +101,6 @@ function listUserClicked(evt, userData) {
 
 // set nilai ke formulir
 function setFormData(data) {
-    console.log(data);
     document.getElementById('user-photo').setAttribute('src', data._links.avatar.href)
     document.getElementById('avatar').value = data._links.avatar.href
     document.getElementById('first-name').value = data.first_name
@@ -128,10 +127,9 @@ function editOrUpdate(newData, userID) {
         .catch(() => {console.log('Method tidak dapat digunakan');})
         .then(res => res.json())
         .then(obj => {
-            console.log(obj);
-
             if(obj._meta.success) {
                 alert('Data saved')
+                getUser(resAPI.activePage)
             }else{
                 obj.result.forEach(function(row) {
                     alert(row.message)
