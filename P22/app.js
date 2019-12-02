@@ -1,27 +1,43 @@
-// Hello World
-console.log("Hello World")
+const http = require('http')
+const fs = require('fs')
 
-// get module
-var date = require('./waktu')
-console.log(date.getDate())
-console.log(date.getDate().getMonth())
+http.createServer((req, res) => {
+    
+    res.view = function(page) {
+        fs.readFile(`./page/${page}`, "utf8", (err, data) => {
+            if(err) {
+                this.write(err.message)
+                this.end()
+            }
 
-// file system
-var _fs = require('fs')
-
-// write file
-_fs.appendFile('./example.txt', 'This Content by Append\n', (err) => {
-    if(err) {
-        console.log(err.message)
-        return;
+            this.write(data)
+            this.end()
+        })
     }
-})
 
-// read file
-_fs.readFile('./example.txt', 'utf8', (err, content) => {
-    if(err) {
-        console.log(err.message)
-        return;
+    res.json = function(obj) {
+        this.write(JSON.stringify(obj))
+        this.end()
     }
-    console.log(content)
-})
+
+
+    let requestRouter = `${req.method} ${req.url}`;
+
+    let web = require('./routers/web')
+    if(requestRouter in web.router) {
+        web.router[requestRouter](req, res)
+        return
+    }
+
+    let api = require('./routers/api')
+    if(requestRouter in api.router) {
+        api.router[requestRouter](req, res)
+        return
+    }
+
+
+    console.error(`User found bad route at ${requestRouter}`)
+    res.writeHead(404)
+    res.view("error/404.html")
+
+}).listen(8084, () => {console.log('run on 8084')})
