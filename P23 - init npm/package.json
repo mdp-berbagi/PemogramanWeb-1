@@ -1,0 +1,14 @@
+{
+  "name": "p23",
+  "version": "1.0.0",
+  "description": "How to create npm init",
+  "main": "index.js",
+  "scripts": {
+    "dev": "node server.js"
+  },
+  "author": "Abdul Aziz Al Basyir",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-12">
+                <h2>gorest.co.id</h2>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-3">
+                <input type="text" name="cari" id="cari" placeholder="Type Name Here..." size="58%">
+                <ul id="users" class="list-group">
+
+                </ul>
+            </div>
+            <div class="col-9">
+                <div class="row">
+                    <div class="col-4">
+                        <img src="" alt="" id="avatar">
+                    </div>
+                    <div class="col-6">
+                        <button id="btnReset">Reset</button>
+                        <form action="" id="form" method="POST">
+
+                            <h5>First Name:</h5>
+                            <input type="text" id="name" size="80px">
+
+                            <h5>Last Name:</h5>
+                            <input type="text" id="name2" size="80px">
+
+                            <h5>Email:</h5>
+                            <input type="email" id="email" size="80px">
+
+                            <h5>Date of birth:</h5>
+                            <input type="date" id="birth" size="80px">
+
+                            <h5>Gender:</h5>
+                            <input type="radio" name="JK"> Male
+                            <input type="radio" name="JK"> Female
+
+                            <h5>Phone:</h5>
+                            <input type="text" name="phone" id="phone" size="80px">
+
+                            <h5>Address:</h5>
+                            <textarea name="address" id="address" cols="60" rows="5"></textarea>
+                            <br>
+                        </form>
+                        <button id="btnSave">Save</button>
+                        <button id="btnUpdate">Update</button>
+                        <button id="btnDelete">Delete</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
