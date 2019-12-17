@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Vue - Essensial</title>
+</head>
+<body>
+
+    <div id='app'>
+        <h1>Belajar Vue</h1>
+
+        <p>
+            Essensial Vue
+        </p>
+
+        <h2>Show Data</h2>
+        <div>{{message}}</div>
+        
+        <h2>IF</h2>
+        Ganti boolean disini : <button @click='seen = !seen'>{{ seen }}</button>
+        <div>
+            <div v-if='seen'>Now You see me</div>
+            <div v-else>Now you dont!</div>
+        </div>
+
+        <h2>Eachloop</h2>
+        <ul>
+            <li v-for='x in mhs'>
+                {{ x.npm }} - {{ x.nama }}
+            </li>
+        </ul>
+
+        <h2>Event Listener</h2>
+        <button @click='akuDiClick'>Coba</button>
+
+        <h2>Model</h2>
+        <div>
+            <input v-model='nilai' />
+            <div>{{ nilai }}</div>
+        </div>
+
+        <h2>Components</h2>
+        <my-tag test='ini propnya test' key='test-1'></my-tag>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    
+    <script>
+        Vue.component('my-tag', {
+            props: ['test'],
+            template: '<div><div>{{ test }} - right data is props</div><div>{{ test }} - right data is props</div></div>'
+        });
+
+        var app = new Vue({
+            el: '#app',
+            data: {
+                message: 'Hello Vue!',
+                nilai: '',
+                seen: true,
+                mhs: [
+                    {
+                        npm: 1822250092,
+                        nama: "Aziz"
+                    },
+                    {
+                        npm: 1822250093,
+                        nama: "Aziz3"
+                    }
+                ]
+            },
+
+            methods: {
+                akuDiClick() {
+                    alert('Aku ter click');
+                }
+            }
+        });
+    </script>
+</body>
+</html>
