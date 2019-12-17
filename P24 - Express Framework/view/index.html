@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Chat App</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        #chatViewer {
+
+        }
+
+        #chatViewer li {
+            padding: 10px;
+        }
+
+        #chatViewer li:nth-child(odd) {
+            background: lightgrey;
+        }
+
+        #typePlace {
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+
+        #textMsg {
+            width: 80%;
+            margin: 0;
+        }
+        
+        #btnSend {
+            width: 20%;
+        }
+    </style>
+</head>
+<body>
+    <ul id='chatViewer'>
+
+    </ul>
+
+    <form id='typePlace'>
+        <textarea id='textMsg'></textarea>
+        <button id='btnSend'>Send</button>
+    </form>
+
+    <script src='/socket.io/socket.io.js'></script>
+    <script src='https://code.jquery.com/jquery-3.4.1.min.js'></script>
+    <script>
+        var socket = io();
+
+        var chat = {};
+
+        $("#typePlace").submit(function(e) {
+            var text = $("#textMsg").val();
+
+            chat[text] = $("<li></li>").append(text);
+
+            $("#chatViewer").append(chat[text])
+
+            socket.emit("sendMsg", text)
+
+            e.preventDefault();
+        });
+
+        socket.on("check-send-success", function(res) {
+            chat[res].style='background: green'
+        })
+    </script>
+</body>
+</html>
