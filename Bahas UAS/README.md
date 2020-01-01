@@ -10,3 +10,7 @@ didalem zip itu lah teisi Nodejs + npm + vue cli + vue ui + fresh-vue + vue rout
 
 ## Download
 INI WAK : [Download](https://www.mediafire.com/file/b5yqiyu3usqjnc7/Bahas_UAS.zip/file)
+
+## Tips
+1. Kalu nak pasti, kamu bawak flashdisk isiny zip ini, soalnyh 300 mb besakny.
+2. saran aku tanp vue cli bae, biar langsung ngoding, klo pakek vue ui kamu nak import dlu, ribet.
