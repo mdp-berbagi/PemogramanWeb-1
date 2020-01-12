@@ -1,5 +1,5 @@
 # BACO WAK
-> untuk catetan uas, bukak di file Catetan UAS
+**untuk catetan uas, bukak di file Catetan UAS**
 didalem zip itu lah teisi Nodejs + npm + vue cli + vue ui + fresh-vue + vue router, tinggal dipakek
 
 ## install dak sampe 1 menit
