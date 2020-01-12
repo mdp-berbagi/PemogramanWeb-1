@@ -59,7 +59,7 @@ export default {
 ```
 
 ## Vue Router
-Lebih lengkap kunjungi https://router.vuejs.org/guide/
+> npm install vue-router
 
 ### Pemasangan
 ```
@@ -100,4 +100,60 @@ this.$router.go(-1)
 
 // lanjut ke halaman foo
 this.$router.push('/foo')
+```
+
+
+## Axios
+> npm install axios
+
+### Pakek
+```
+// http tu bebas, cak variable
+import http from 'Axios' 
+
+export default {
+  data: () => ({
+    headers: {
+      'Authorization': 'Bearer xnxx'
+    }
+  }),
+  
+  methods: {
+    getBreeds() {
+      // ambil dari api
+      let proccess = http.get('https://dog.ceo/api/breeds/list/all', this.header)
+      
+      // proses jika gagal
+      proccess.catch((err) => {
+        console.error('error')
+      })
+      
+      // proses jika berhasil
+      proccess.then((res) => {
+        console.error(res)
+      })
+    },
+    
+    setBreed() {
+      let newData = {
+        name: 'Backpacking',
+        price: '3000'
+      }
+      
+      // untuk update ganti bae post > put
+      // untuk delete ganti bar post > delete
+      let proccess = http.post('https://dog.ceo/api/breeds/insert', newData, this.headers)
+      
+      // proses jika gagal
+      proccess.catch((err) => {
+        console.error('error')
+      })
+      
+      // proses jika berhasil
+      proccess.then((res) => {
+        console.error(res)
+      })
+    }
+  }
+}
 ```
